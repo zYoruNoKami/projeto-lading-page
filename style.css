@@ -1,150 +1,236 @@
-*{
-    margin: 0px;
-    font-family: 'inter';
-    
+* {
+  margin: 0px;
+  font-family: "inter";
 }
 
-#logo{
-   margin-left: 50px;
-   margin-top: 50px;
-}
-
-#Titulo-superior{
-margin-left: 150px;
-margin-top: 50px;
-}
-
-#Texto-menursuperior{
-margin-left: 150px;
-margin-top: 35px;
-padding-bottom: 100px;
-}
-
-#menusuperior{
-    background-image: url(imagens/fundomenusuperior.svg);
-    background-size: cover;
-    color: aliceblue;
-}
-
-#menuinformacional{
-   background-color: #EAECE5; 
-   display: grid;
-   grid-auto-flow: column;
-   columns: auto;
-}
-
-.icone{
-    margin: 50px 0px 50px 100px;
-    padding: 25px;
-}
-
-#secaovideo{
-    display: grid;
-    grid-auto-flow: column;
-    columns: auto;
-}
-
-.textoinformativo{
-    display: flex;
-    align-items: center;
-}
-
-#titulovideo{
-  color: #247BA0;  
+#logo {
+  margin-left: 50px;
   margin-top: 50px;
 }
 
-#video{
-    margin: 50px 25px 50px 100px
-
+#Titulo-superior {
+  margin-left: 150px;
+  margin-top: 50px;
 }
 
-#carrrosssel{
-    background-color: #247BA0;
-    padding: 0px;
-    padding-top: 75px;
-    padding-bottom: 35pxpx;
+#Texto-menursuperior {
+  margin-left: 150px;
+  margin-top: 35px;
+  padding-bottom: 100px;
 }
 
-#titulo-carrossel{
-    color: white;
+#menusuperior {
+  background-image: url(imagens/fundomenusuperior.svg);
+  background-size: cover;
+  color: aliceblue;
+}
+
+#menuinformacional {
+  background-color: #eaece5;
+  display: grid;
+  grid-auto-flow: column;
+  columns: auto;
+}
+
+.icone {
+  margin: 50px 0px 50px 100px;
+  padding: 25px;
+}
+
+#secaovideo {
+  display: grid;
+  grid-auto-flow: column;
+  columns: auto;
+}
+
+.textoinformativo {
+  display: flex;
+  align-items: center;
+}
+
+#titulovideo {
+  color: #247ba0;
+  margin-top: 50px;
+}
+
+#video {
+  margin: 50px 25px 50px 100px;
+}
+
+#carrrosssel {
+  background-color: #247ba0;
+  padding: 0px;
+  padding-top: 75px;
+  padding-bottom: 35px;
+}
+
+#titulo-carrossel {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+#div-cards {
+  margin-top: 25px;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.card {
+  margin-left: 55px;
+}
+
+#setaesquerda {
+  display: none;
+}
+
+#bruna {
+  display: none;
+}
+
+.seta {
+  margin-top: 55px;
+  cursor: pointer;
+}
+
+.seta:hover {
+  transform: translateY(-7px);
+  transition-duration: 0.5s;
+}
+
+#formulario {
+  text-align: center;
+  background-color: #eaece5;
+  margin-top: 25px;
+  padding: 25px;
+}
+
+#tituloformulario {
+  font-size: 25px;
+  margin: 25px;
+  padding: 25px;
+  color: #383838;
+}
+
+input {
+  width: 400px;
+  height: 53px;
+  background-color: #d4d4d0e3;
+  margin: 15px;
+  border: 0px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+button {
+  background-color: #247ba0;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  color: #eaece5;
+  border: 0px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #318fb8;
+  color: white;
+  transform: translateY(-7px);
+  box-shadow: 0px 15px 20px #051121d0;
+  transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+  #menusuperior {
+    max-width: 57%;
+  }
+  #Titulo-superior {
+    margin: 30px;
+  }
+  #Texto-menursuperior {
+    margin: 30px;
+    margin-bottom: 0px;
+  }
+  #menuinformacional {
+    max-width: 57%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: 25px;
-    
-}
-
-#div-cards{
-    margin-top: 25px;
+  }
+  .textoinformativo {
+    text-align: center;
+    margin-right: 100%;
+  }
+  .textoinformativo img {
+    margin: 25px;
+  }
+  #video {
+    max-width: 300px;
+    margin: 30px;
+  }
+  #secaovideo {
+    display: flex;
+    flex-direction: column;
+    margin-left: -12px;
+  }
+  .infoVideo {
+    max-width: 50%;
+    margin: 0px 0px 25px 25px;
+  }
+  #titulovideo {
+    font-size: 20px;
+    text-align: center;
+  }
+  #textovideo {
+    font-size: 10px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+  #carrrosssel {
+    max-width: 57%;
+  }
+  #div-cards {
+    max-width: 50%;
     display: grid;
     grid-auto-flow: column;
+    margin: 10px 10px 10px 0px;
+  }
+  .card {
+    max-width: 149px;
+    padding: 10px;
+    margin: 0px;
+  }
+  #bruna {
+    margin-top: 45px;
+    margin-left: -30px;
+    padding: 10px 5px 10px 10px;
+  }
+  #samantha {
+    margin-top: 45px;
+    padding: 10px 0px 10px 0px;
+  }
+  #leonardo {
+    margin-top: 45px;
+    padding: 10px 10px 10px 10px;
+  }
+  #setaesquerda {
+    max-width: 50px;
+    margin-right: 5px;
+    margin-left: -10px;
+  }
+  #setadireita {
+    max-width: 50px;
+    padding: 0px 0px 10px 0px;
+    margin-left: -15px;
+  }
+  #formulario {
+    max-width: 100%;
+  }
+  input {
+    max-width: 90%;
+  }
+  button {
+    max-width: 60%;
+  }
 }
-
-.card{
-    margin-left: 55px;
-
-}
-
-#setaesquerda{
-    display: none;
-}
-
-#bruna{
-    display:none;
-}
-
-.seta{
-    margin-top: 55px;
-    cursor: pointer;
-}
-
-.seta:hover{
-    transform: translateY(-7px);
-    transition-duration: 0.5s;
-}
-
-#formulario{
-    text-align: center;
-    background-color: #EAECE5;
-    margin-top: 25px;
-    padding: 25px;
-
-}
-
-#tituloformulario{
-    font-size: 25px;
-    margin: 25px;
-    padding: 25px;
-    color: #383838;
-}
-
-input{
-    width: 400px;
-    height: 53px;
-    background-color: #d4d4d0e3;
-    margin: 15px;
-    border: 0px;
-    border-radius: 5px;
-    padding-left: 10px;
-}
-
-button{
-    background-color: #247BA0;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    color: #EAECE5;
-    border: 0px;
-    font-weight: bolder;
-    cursor: pointer;
-}
-  
-button:hover{
-    background-color: #318fb8;
-    color: white;
-    transform: translateY(-7px);
-    box-shadow: 0px 15px 20px #051121d0;
-    transition-duration: 0.5s;
-    
-}
-
-
