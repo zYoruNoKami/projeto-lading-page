@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,25 +10,148 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Landinf Page DNC School</title>
+    <title>Landing Page DNC School</title>
   </head>
   <body>
     <!-- HEADER CABEÇALHO -->
     <header class="header-container">
-      <div>
-        <img src="/img/logo.svg" alt="Logo Dnc" />
+      <div class="header-logo">
+        <img src="img/logo.svg" alt="Logo Dnc" />
       </div>
-      <div>
+      <div class="header-text">
         <h1>
           Dê os primeiros passos da <br />
           sua carreira em Tecnologia
         </h1>
+
         <p>
-          Increva-se no curso gratuito de Introdução á <br />
-          Tecnologia da DNC Schol e aprenda os principais <br />
-          fundamentos para construir experiência efetivas
+          Inscreva-se no curso gratuito de Introdução à <br />
+          Tecnologia da DNC School e aprenda os principais <br />
+          fundamentos para construir experiências efetivas.
         </p>
       </div>
     </header>
+    <!-- CERTIFICAÇÕES/CONTEÚDOS/HORAS DE CURSO -->
+    <section class="section-container">
+      <div>
+        <img src="/img/certificado.svg" alt="Certificado" /> Certificado de
+        conclusão
+      </div>
+      <div>
+        <img src="/img/horas.svg" alt="Horas de curso" /> 4 horas de conteúdo
+      </div>
+      <div>
+        <img src="/img/aulas.svg" alt="Aulas gravadas" /> Aulas online gravadas
+      </div>
+    </section>
+    <!-- ARTICLE CONTEÚDO -->
+    <article class="article-container">
+      <div class="article-video">
+        <iframe
+          width="500"
+          height="300"
+          src="https://www.youtube.com/embed/ITxGkd9h4n4?si=Sb2r9Qlra0ZLvORG"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="article-text">
+        <h1>
+          Aprenda com especialistas e <br />
+          comece seu primeiro projeto
+        </h1>
+        <p>
+          Conheça o processo de desenvolvimento e entenda como utilizar <br />
+          os principais métodos e ferramentas da área para resolver <br />
+          problemas complexos.
+        </p>
+        <br />
+        <p>
+          Conquiste seu certificado e desenvolva um projeto prático <br />
+          para aplicar seus conhecimentos.
+        </p>
+      </div>
+    </article>
+    <!-- SEÇÃO EX-ALUNOS -->
+    <article class="article-container2">
+      <div>
+        <h1>Mais de 500 alunos já iniciaram seus estudos</h1>
+      </div>
+      <div class="cards-container">
+        <div id="seta-esquerda">
+          <img
+            src="/img/setaEsquerda.svg"
+            onclick="RolarParaEsquerda()"
+            alt="Seta esquerda"
+          />
+        </div>
+        <div id="cardBruna" class="card">
+          <img src="/img/cardBruna.svg" alt="Foto da bruna" />
+        </div>
+        <div id="cardLeonardo" class="card">
+          <img src="/img/cardLeonardo.svg" alt="Foto do Leonardo" />
+        </div>
+        <div id="cardSamantha" class="card">
+          <img src="/img/cardSamantha.svg" alt="Foto da Samantha" />
+        </div>
+        <div class="setas" id="seta-direita">
+          <img
+            src="/img/setaDireita.svg"
+            onclick="RolarParaDireita()"
+            alt="Seta direita"
+          />
+        </div>
+      </div>
+    </article>
+    <!-- FOOTER TÍTULO -->
+    <footer class="container-footer">
+      <h1>Comece agora mesmo e dê o próximo passo da sua carreira</h1>
+    </footer>
+    <!-- FORMS DE CAPTURA DE DADOS -->
+    <form
+      action="https://api.sheetmonkey.io/form/bXdp6xULmbpLHMGJiSkytr"
+      method="post"
+      class="container-forms"
+    >
+      <input
+        type="text"
+        required
+        name="Name"
+        id="nome"
+        placeholder="Nome"
+      /><br />
+      <input
+        type="email"
+        required
+        name="Email"
+        id="e-mail"
+        placeholder="E-mail"
+      /><br />
+      <input
+        type="number"
+        required
+        name="Phone"
+        id="telefone"
+        placeholder="Telefone"
+      /><br />
+      <input
+        type="hidden"
+        name="Created"
+        value="x-sheetmonkey-current-date-time"
+      />
+      <button type="submit">Acesse a ementa grátis</button>
+    </form>
+    <script src="index.js"></script>
   </body>
 </html>

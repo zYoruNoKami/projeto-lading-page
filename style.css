@@ -1,0 +1,334 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+
+:root {
+  --cor-primaria: #247ba0; /*Cor para emblemas,backgroud*/
+  --cor-fundo: #ffffff;
+  --cor-texto: #383838;
+  --font-padrao: "Inter", sans-serif;
+}
+
+/* --- CONFIGURAÇÃO PARA TODA A PAGINA --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Incluir o preenchimento e a borda na largura e altura de um elemento*/
+  text-decoration: none; /*Remove sublinado de links globalmente*/
+}
+
+/* --- CONFIGURAÇÃO PADRÃO PARA NÃO PRECISAR FICAR COLOCANDO COR E FONTS PELO CSSS --- */
+
+body {
+  font-family: var(--font-padrao);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* --- HEADER-CONTAINER --- */
+
+.header-container {
+  background-image: url(/img/background.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column; /*Alinhamento em modo coluna*/
+  color: #ffffff; /*Devido ao background foi necessario colocar a cor branca na font*/
+}
+
+.header-text {
+  padding-left: 8%;
+  padding-top: 8%;
+}
+
+/* -- SECTION-CONTAINER --  */
+
+/* Edição container pai */
+.section-container {
+  width: 100%;
+  background-color: #eaece5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+  font-size: 18px;
+}
+/* Edição container filhos */
+.section-container div {
+  max-width: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* -- ARTICLE-CONTAINER -- */
+
+.article-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* -- Edição de tamanho do video e texto para alinhamento -- */
+
+.article-video {
+  padding: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.article-text {
+  padding: 10%;
+  padding-left: 0;
+}
+
+.article-text h1 {
+  color: var(--cor-primaria);
+}
+
+/* -- ARTICLE-CONTAINER 2 -- */
+
+/* Edição container Pai */
+.article-container2 {
+  max-width: 100%;
+  background-color: #383838;
+  background: #247ba0;
+  padding: 3%;
+}
+
+/*Edição container filho  */
+.article-container2 h1 {
+  padding-bottom: 2%;
+  text-align: center;
+  color: #ffffff;
+}
+/* Edição cards */
+.cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /*Adicionado: transforma o container em referência para as setas*/
+  gap: 30px; /* Dica de ouro: use gap para espaçar os cards em vez de padding individual */
+}
+
+/* Configure as setas para flutuarem nas bordas do container */
+#seta-esquerda, /* <-- VÍRGULA AQUI! */
+#seta-direita {
+  cursor: pointer;
+  padding: 1%;
+  position: absolute; /* Tira as setas do fluxo e impede que empurrem os cards */
+  top: 50%; /* Alinha ao meio */
+  transform: translateY(-50%); /* Centraliza perfeitamente no meio */
+  z-index: 10; /* Garante que a seta não fique atrás da imagem */
+}
+
+#seta-esquerda:hover, /* <-- VÍRGULA AQUI! */
+#seta-direita:hover {
+  transform: translateY(
+    calc(-50% - 7px)
+  ); /* Mantém o alinhamento e faz o efeitinho de pular */
+  transition: 0.6s;
+}
+
+#seta-esquerda {
+  left: 10px;
+  display: none;
+}
+
+#seta-direita {
+  right: 10px;
+}
+
+/* Trava o tamanho dos cards para não ficarem mudando quando trocar */
+.card {
+  width: 25%; /* Define uma largura máxima fixa */
+  display: flex;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%; /* A imagem vai respeitar os 45% definidos acima */
+  height: auto;
+}
+
+/* Mantém a Samantha oculta inicialmente */
+#cardSamantha {
+  display: none;
+}
+
+/* -- Container-Footer -- */
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+/* -- CONTAINER FORMS -- */
+
+.container-forms {
+  display: grid;
+  justify-content: center;
+  padding: 3%;
+}
+
+input {
+  width: 400px;
+  border-radius: 8px;
+  background-color: #eaece5;
+  padding: 15px;
+  border: none;
+}
+
+/* Edição da cor dentro forms */
+
+input::placeholder {
+  color: #383838;
+}
+
+/* Edição do Botão */
+
+button {
+  width: 80%;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  margin-left: 11%;
+  background-color: #247ba0;
+  color: white;
+
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #247ba0;
+  color: white;
+  transform: translateY(-7px);
+  box-shadow: 0px 15px 20px #05161d8b;
+  transition: 0.6s;
+}
+
+/* @MEDIA QUERIES */
+
+/* Tablete/ laptop pequeno */
+
+@media screen and (max-width: 1024px) {
+  /* Edição Video e Texto */
+  .article-video {
+    padding: 2%;
+    padding-top: 5%;
+  }
+  .article-text {
+    padding: 0%;
+    padding-top: 5%;
+  }
+  /* Edição de cardes */
+
+  .card {
+    width: 39%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* Edição do Título */
+  .header-container {
+    width: 100%;
+  }
+  .header-text {
+    width: auto;
+    height: auto;
+    font-size: 13px;
+  }
+  /* Edição das certificações */
+  .section-container {
+    display: grid;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .section-container div {
+    padding: 8%;
+    width: 300px;
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    gap: 5px; /* Controla o espaço exato entre a imagem e o texto */
+    margin-bottom: 15px; /* Espaço entre uma linha e outra */
+  }
+  /* Edição do container de video + texto */
+  .article-container {
+    display: grid;
+  }
+  .article-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/ 9;
+  }
+  .article-text {
+    width: 100%;
+    padding: 5%;
+  }
+  .article-text h1 {
+    text-align: start;
+    font-size: 25px;
+    padding-bottom: 5%;
+  }
+  .article-text p {
+    text-align: justify;
+    font-size: 13px;
+  }
+  /* Edição cards + texto */
+  .article-container2 h1 {
+    font-size: 20px;
+  }
+
+  .cards-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 0 50px; /* Mantém a zona de segurança para as setas */
+  }
+
+  #seta-esquerda {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    display: none;
+  }
+
+  #seta-direita {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  /* Edição do footer */
+  .container-footer {
+    width: 100%;
+    padding: 5%;
+  }
+  .container-footer h1 {
+    font-size: 20px;
+  }
+}
