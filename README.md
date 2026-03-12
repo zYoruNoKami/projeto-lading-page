@@ -6,7 +6,7 @@ Uma Landing Page responsiva desenvolvida para a DNC School com o objetivo de cap
 
 Abaixo você pode conferir como ficou a interface final e os bastidores do código no VS Code:
 
-![Preview do Site](image_f2c5e6.jpg)
+![Preview do Site] blob:https://gemini.google.com/afc38aa0-09cc-41bb-818b-93494d5e8fa7
 *Interface da Landing Page rodando no navegador.*
 
 <details>
